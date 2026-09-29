@@ -1,0 +1,75 @@
+{
+  "annotations": {
+    "list": []
+  },
+  "editable": true,
+  "panels": [
+    {
+      "type": "stat",
+      "title": "Telemetry Records",
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 0,
+        "y": 0
+      },
+      "targets": [
+        {
+          "rawSql": "SELECT COUNT(*) AS value FROM telemetry;",
+          "format": "table"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Power (kW)",
+      "gridPos": {
+        "h": 8,
+        "w": 18,
+        "x": 6,
+        "y": 0
+      },
+      "targets": [
+        {
+          "rawSql": "SELECT timestamp AS time, power_kw FROM telemetry ORDER BY timestamp;",
+          "format": "time_series"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Temperature (\u00b0C)",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 8
+      },
+      "targets": [
+        {
+          "rawSql": "SELECT timestamp AS time, temperature FROM telemetry ORDER BY timestamp;",
+          "format": "time_series"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Voltage (V)",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 8
+      },
+      "targets": [
+        {
+          "rawSql": "SELECT timestamp AS time, voltage FROM telemetry ORDER BY timestamp;",
+          "format": "time_series"
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 39,
+  "title": "Factory Energy Overview",
+  "version": 1
+}

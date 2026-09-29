@@ -1,0 +1,26 @@
+project:
+  name: "Factory Energy Intelligence"
+  version: "1.6.0"
+
+data:
+  telemetry_interval_seconds: 5
+  default_device_id: "ESP32-ENERGY-001"
+
+mqtt:
+  telemetry_topic: "factory/energy/telemetry"
+  status_topic: "factory/energy/status"
+  anomaly_topic: "factory/energy/anomaly"
+  alert_topic: "factory/energy/alert"
+
+database:
+  type: "sqlite"
+  path: "database/energy.db"
+
+ml:
+  algorithm: "isolation_forest"
+  contamination: 0.05
+  random_state: 42
+
+dashboard:
+  title: "Factory Energy Intelligence"
+  page_layout: "wide"
