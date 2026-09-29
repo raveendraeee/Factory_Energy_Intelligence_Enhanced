@@ -1,9 +1,11 @@
 import json
 import os
 import ssl
+
 import paho.mqtt.client as mqtt
 from dotenv import load_dotenv
-from .database import insert_telemetry, insert_anomaly_event
+
+from .database import insert_anomaly_event, insert_telemetry
 from .prediction_service import predict_telemetry
 
 load_dotenv()

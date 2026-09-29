@@ -1,6 +1,7 @@
-from fastapi import FastAPI
 from pathlib import Path
+
 import pandas as pd
+from fastapi import FastAPI
 
 app = FastAPI(title="Factory Energy Intelligence API", version="1.6.0")
 DATA = Path("data/cloud_demo")

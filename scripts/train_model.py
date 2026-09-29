@@ -1,6 +1,8 @@
 from pathlib import Path
+
 import pandas as pd
-from src.anomaly_detector import train_model, save_model
+
+from src.anomaly_detector import save_model, train_model
 
 path = Path("data/cloud_demo/telemetry.csv")
 df = pd.read_csv(path)

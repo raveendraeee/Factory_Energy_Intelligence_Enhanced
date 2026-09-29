@@ -1,6 +1,7 @@
-from src.mqtt_publisher import generate_telemetry
 import json
 from pathlib import Path
+
+from src.mqtt_publisher import generate_telemetry
 
 Path("data/sample").mkdir(parents=True, exist_ok=True)
 with open("data/sample/telemetry.jsonl", "w", encoding="utf-8") as f:

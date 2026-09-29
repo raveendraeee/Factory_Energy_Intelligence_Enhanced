@@ -1,5 +1,6 @@
-from .feature_engineering import telemetry_to_dataframe, extract_features
-from .anomaly_detector import load_model, predict_anomalies, anomaly_score
+from .anomaly_detector import anomaly_score, load_model, predict_anomalies
+from .feature_engineering import extract_features, telemetry_to_dataframe
+
 
 def predict_telemetry(telemetry):
     dataframe = telemetry_to_dataframe([telemetry])

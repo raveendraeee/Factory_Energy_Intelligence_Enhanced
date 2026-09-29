@@ -1,9 +1,10 @@
-from pathlib import Path
-from datetime import datetime, timedelta, timezone
 import random
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+
+import joblib
 import pandas as pd
 from sklearn.ensemble import IsolationForest
-import joblib
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "cloud_demo"

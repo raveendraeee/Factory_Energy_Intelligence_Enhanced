@@ -1,9 +1,10 @@
 import json
 import os
 import random
+import ssl
 import time
 from datetime import datetime, timezone
-import ssl
+
 import paho.mqtt.client as mqtt
 from dotenv import load_dotenv
 

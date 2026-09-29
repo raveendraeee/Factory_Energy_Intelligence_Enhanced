@@ -1,13 +1,17 @@
 from pathlib import Path
+
 import pandas as pd
-import streamlit as st
 import plotly.express as px
+import streamlit as st
 
 ROOT = Path(__file__).resolve().parents[1]
 DEMO = ROOT / "data" / "cloud_demo"
 
-st.set_page_config(page_title="Factory Energy Intelligence", page_icon="⚡", layout="wide")
-
+st.set_page_config(
+    page_title="Factory Energy Intelligence",
+    page_icon="⚡",
+    layout="wide",
+)
 @st.cache_data(ttl=10)
 def load_data():
     telemetry_path = DEMO / "telemetry.csv"
@@ -50,7 +54,13 @@ c3.metric("Peak Power", f"{peak:.2f} kW")
 c4.metric("Average Temperature", f"{avg_temp:.1f} °C")
 
 tab1, tab2, tab3, tab4, tab5 = st.tabs(
-    ["Overview", "Live Telemetry", "AI Anomalies", "Historical Analytics", "System Health"]
+    [
+        "Overview",
+        "Live Telemetry",
+        "AI Anomalies",
+        "Historical Analytics",
+        "System Health",
+    ]
 )
 
 with tab1:

@@ -1,5 +1,7 @@
 import pandas as pd
+
 from src.feature_engineering import extract_features
+
 
 def test_extract_features():
     df = pd.DataFrame([{

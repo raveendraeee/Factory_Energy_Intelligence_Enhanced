@@ -13,3 +13,4 @@ psycopg[binary]==3.2.10
 sqlalchemy==2.0.43
 pytest==9.1.1
 ruff==0.16.9
+httpx
